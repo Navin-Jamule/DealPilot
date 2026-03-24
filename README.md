@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue?style=for-the-badge&logo=python)](https://www.python.org/) [![OpenAI](https://img.shields.io/badge/OpenAI-GPT--5.1-black?style=for-the-badge&logo=openai)](https://openai.com/) [![ChromaDB](https://img.shields.io/badge/ChromaDB-VectorDB-purple?style=for-the-badge)](https://www.trychroma.com/) [![Gradio](https://img.shields.io/badge/Gradio-UI-orange?style=for-the-badge)](https://gradio.app/)
 
-DealPilot is an autonomous multi-agent system that discovers, analyzes, and evaluates online deals. It combines RAG with GPT-5.1, a QLoRA fine-tuned LLaMA specialist agent, and a neural network model to estimate true product value, identify high-discount opportunities, and deliver intelligent alerts with visualization.
+DealPilot is an autonomous multi-agent system that discovers, analyzes, and evaluates online deals. It combines RAG with gpt-5-mini, a QLoRA fine-tuned LLaMA specialist agent, and a neural network model to estimate true product value, identify high-discount opportunities, and deliver intelligent alerts with visualization.
 
 ![Image](https://github.com/user-attachments/assets/223c7b1a-8e1b-4bf9-9125-a2dc79355d05)
 ---
@@ -22,7 +22,7 @@ graph TD
     Planner --> Messenger[Messaging Agent]
 
     subgraph Pricing_Intelligence
-    Ensemble --> GPT[RAG + GPT-5.1]
+    Ensemble --> GPT[RAG + gpt-5-mini]
     Ensemble --> Specialist[QLoRA LLaMA Specialist]
     Ensemble --> NN[Neural Network Model]
     end
@@ -49,7 +49,7 @@ To design a robust pricing system, multiple approaches were systematically evalu
 - Integrated NLP-based methods and neural networks to capture textual and feature-based patterns  
 - Evaluated large language models for contextual reasoning and price understanding  
 - Applied fine-tuning (QLoRA on LLaMA 3.2) to create a domain-specific Specialist Agent  
-- Enhanced performance further using Retrieval-Augmented Generation (RAG) with GPT-5.1  
+- Enhanced performance further using Retrieval-Augmented Generation (RAG) with gpt-5-mini  
 
 ### Key Insight
 
@@ -58,7 +58,7 @@ No single model performed best across all scenarios. While LLMs provided strong 
 ### Final Methodology
 
 The final system uses an ensemble approach combining:
-- GPT-5.1 with RAG for contextual reasoning  
+- gpt-5-mini with RAG for contextual reasoning  
 - Specialist Agent for domain-specific accuracy  
 - Neural Network for numerical stability  
 
@@ -73,7 +73,7 @@ This hybrid design achieved the lowest error and forms the core of DealPilot.
 - Coordinated by a Planning Agent  
 
 ### Hybrid Pricing Intelligence
-- RAG with GPT-5.1 for context-aware reasoning  
+- RAG with gpt-5-mini for context-aware reasoning  
 - Specialist Agent using QLoRA fine-tuned LLaMA 3.2  
 - Neural Network Agent for numerical estimation  
 
@@ -107,7 +107,7 @@ Final price is derived using ensemble logic.
 - Pushover
 
 ### AI and ML
-- GPT-5.1  
+- gpt-5-mini  
 - RAG pipeline  
 - LLaMA 3.2 (QLoRA fine-tuned)  
 - PyTorch  
